@@ -1,12 +1,11 @@
 "use client"
 import React, { useState,useEffect } from 'react'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
-import { FaGithub, FaLinkedin, FaWhatsapp} from 'react-icons/fa'
+import { FaGithub, FaWhatsapp} from 'react-icons/fa'
 import { FaSquareXTwitter } from "react-icons/fa6";
 
 import Logo from "../assets/logo.png"
 import Image from 'next/image'
-import { FaSquareXTwitter } from 'react-icons/fa6'
 
 const NavBar = () => {
   const [shadow,setShadow]=useState(false)
