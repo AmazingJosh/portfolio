@@ -112,7 +112,7 @@ export const FloatingNav = ({
                     SKILLS
                   </li>
                 </a>
-                <a href="/#projects">
+                <a href="/#recentproject">
                   <li className="uppercase text-sm ml-10 md:text-lg  hover:border-b">
                     projects
                   </li>
@@ -182,7 +182,7 @@ export const FloatingNav = ({
               </div>
               <div className="text-violet-900">
                 <ul className="py-4 flex flex-col">
-                  <a href="/home">
+                  <a href="/#home">
                     <li className="py-4 text-sm sm:text-2xl">Home</li>
                   </a>
 
@@ -190,8 +190,7 @@ export const FloatingNav = ({
                     <li className="py-4 text-sm sm:text-2xl">Skills</li>
                   </a>
 
-                  <a href="/#project">
-                    {" "}
+                  <a href="/#recentproject">
                     <li className="py-4 text-sm sm:text-2xl">Project</li>
                   </a>
                   <div className="flex ml-[-4px]">
