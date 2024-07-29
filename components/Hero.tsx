@@ -21,7 +21,7 @@ const words = "Hi, I am Joshua, i develop full stack mobile and web applications
 
 const Hero = () => {
   return (
-    <div className="pb-2 md:pb-16 pt-28 md:pt-36 w-full ">
+    <div className="pb-2 md:pb-16 pt-28 md:pt-36 w-full -z-50 ">
       <div className="rounded-xl">
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"

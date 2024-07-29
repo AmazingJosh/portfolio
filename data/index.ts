@@ -96,7 +96,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
+    title: "Food Recipe application",
     des: "Amazing food recipe with youtube tutorials",
     img: "/foodie.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
