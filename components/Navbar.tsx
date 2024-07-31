@@ -49,7 +49,7 @@ const NavBar = () => {
   <div className={menu? " fixed left-0 top-0 w-[70%] sm:w-[60%] md:[w-45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500":"fixed left-[-100%] top-0 w-[70%] sm:w-[60%] md:[w-45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"}>
     <div className=''>
       <div className='w-full flex items-center justify-between'>
-      <h1 className="text-purple-900 font-normal text-xl sm:text-4xl ">AMAZING</h1>
+      <h1 className="text-purple-900 font-mono shadow-2xl text-xl sm:text-4xl ">AMAZING</h1>
       <div onClick={toggle} className='rounded-full shadow-lg shadow-gray-400 p-3 sm:p-6 cursor-pointer'>
         <AiOutlineClose />
       </div>

@@ -38,7 +38,7 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title: "Tech enthusiast with creativity and design prowess.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -49,7 +49,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a JS Animation library",
+    title: "Currently building a real time chat app",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -92,7 +92,7 @@ export const projects = [
     des: "Explore our college site, and walk through our online library",
     img: "/student.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/https://myuni.netlify.app/",
+    link: "https://myuni.netlify.app/",
   },
   {
     id: 4,
@@ -100,23 +100,23 @@ export const projects = [
     des: "Amazing food recipe with youtube tutorials",
     img: "/foodie.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/https://amazingfoodie.netlify.app/",
+    link: "https://amazingfoodie.netlify.app/",
   },
   {
     id: 5,
-    title: "Travels",
-    des: "Explore our travel app coming soon on playstore",
-    img: "/travels.png",
+    title: "Speedlink Clone",
+    des: "This is a speelink clone website built with react native ",
+    img: "/speedlink.jpeg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/https://github.com/AmazingJosh/travels",
+    link: "https://speedlinkng.vercel.app",
   },
   {
     id: 6,
-    title: "Instagram clone",
-    des: "Explore our instagram cloned-app coming soon on playstore",
-    img: "/insta.png",
+    title: "APk for speedlink clone",
+    des: "This is the apk file for the speedlink clone",
+    img: "/speedlinknative.jpeg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/https://github.com/AmazingJosh/instagram",
+    link: "https://expo.dev/accounts/theamazingjosh/projects/speedlink/buizlds/95e976cf-386b-4d5b-b1a2-9cd6aa4b5756",
   },
 ];
 
