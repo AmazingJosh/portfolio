@@ -3,8 +3,8 @@ import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import {FaTwitter, FaGithub, FaLinkedin, FaWhatsapp} from 'react-icons/fa'
 import { RiTwitterXFill } from "react-icons/ri";
 
-import Logo from "../assets/logo.png"
-import Image from 'next/image'
+const Logo = "https://res.cloudinary.com/dd0jpkzai/image/upload/v1724286557/amazing-high-resolution-logo_fx4niq.png"
+
 
 const NavBar = () => {
   const [shadow,setShadow]=useState(false)
@@ -24,7 +24,7 @@ const NavBar = () => {
   return (
     <div className={shadow? ' bg-white text-violet-700 fixed w-full h-20 z-50 shadow-xl':'bg-white text-violet-700 fixed  w-full h-20 z-50'}>
         <div className='flex justify-between items-center h-full w-full px-2 2xl:px-16'>
-<div className="my-4"><a href="/"> <Image alt='img' src={Logo} className='object-cover w-[85px] h-[85px] p-1 rounded-full'/></a></div>
+<div className="my-4"><a href="/"> <img alt='img' src={Logo} className='object-cover w-[85px] h-[85px] p-1 rounded-full'/></a></div>
 <div className=''>
   <ul className='hidden lg:flex md:items-center'>
 
