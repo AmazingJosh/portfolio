@@ -16,7 +16,7 @@ const Home = () => {
         <div className="max-w-7xl w-full">
           <Hero />
           <Grid />
-          <Skills />
+          <Skills /> 
           <RecentProjects />
           <Footer />
         </div>
