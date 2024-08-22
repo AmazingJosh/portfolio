@@ -3,8 +3,8 @@ import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import {FaTwitter, FaGithub, FaLinkedin, FaWhatsapp} from 'react-icons/fa'
 import { RiTwitterXFill } from "react-icons/ri";
 
-const logo =
-  "https://res.cloudinary.com/dd0jpkzai/image/upload/v1724286557/amazing-high-resolution-logo_fx4niq.png";
+import Logo from "../assets/logo.png"
+import Image from 'next/image'
 
 const NavBar = () => {
   const [shadow,setShadow]=useState(false)
@@ -24,7 +24,7 @@ const NavBar = () => {
   return (
     <div className={shadow? ' bg-white text-violet-700 fixed w-full h-20 z-50 shadow-xl':'bg-white text-violet-700 fixed  w-full h-20 z-50'}>
         <div className='flex justify-between items-center h-full w-full px-2 2xl:px-16'>
-<div className="my-4"><a href="/"> <img alt='img' src={logo} width={85} height={85} className='object-cover w-[85px] h-[85px] p-1 rounded-full'/></a></div>
+<div className="my-4"><a href="/"> <Image alt='img' src={Logo} className='object-cover w-[85px] h-[85px] p-1 rounded-full'/></a></div>
 <div className=''>
   <ul className='hidden lg:flex md:items-center'>
 
@@ -49,8 +49,8 @@ const NavBar = () => {
   <div className={menu? " fixed left-0 top-0 w-[70%] sm:w-[60%] md:[w-45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500":"fixed left-[-100%] top-0 w-[70%] sm:w-[60%] md:[w-45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"}>
     <div className=''>
       <div className='w-full flex items-center justify-between'>
-      {/* <h1 className="text-purple-900 font-mono shadow-2xl text-xl sm:text-4xl ">AMAZING</h1> */}
-      <div onClick={toggle} className='rounded-full shadow-lg shadow-gray-400 p-3 sm:p-6 cursor-pointer flex justify-end'>
+      <h1 className="text-purple-900 font-mono shadow-2xl text-xl sm:text-4xl "></h1>
+      <div onClick={toggle} className='rounded-full shadow-lg shadow-gray-400 p-3 sm:p-6 cursor-pointer'>
         <AiOutlineClose />
       </div>
       </div>
