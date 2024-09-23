@@ -65,14 +65,14 @@ const Hero = () => {
                 /> </a>
                       
                          <a href="https://wa.me/message/UPKYII5XJW5GH1">  <FaWhatsapp
-                  className="border border-black bg-black p-2 hover:scale-110 ease-in rounded-full m-1"
+                  className="border border-black bg-green-600 p-2 hover:scale-110 ease-in rounded-full m-1"
                    size={50}
                 /> </a>
                       
-                        <a href="mailto:theamazingkeyz@gmail.com">  <HiOutlineMail
-                  className="border border-black bg-black p-2 hover:scale-110 ease-in rounded-full m-1"
+                        <Link to="mailto:theamazingkeyz@gmail.com">  <HiOutlineMail
+                  className="border border-black bg-pink-500 p-2 hover:scale-110 ease-in rounded-full m-1"
                    size={50}
-                /> </a>
+                /> </Link>
                     </div>
                     <Image
                       id="svg"
