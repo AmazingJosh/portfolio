@@ -12,7 +12,7 @@ const Skills = () => {
           These are some of my favorite frameworks
         </h2>
         <div className="">
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="text-violet-600 p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
             <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center">
               <div className="m-auto shadow-xl p-8 rounded-xl hover:scale-105 ease-in duration-300">
                 <Image

@@ -76,7 +76,7 @@ export const projects = [
     des: "Checkout your favourite song on our music dowload blog",
     img: "/music.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://musicty.netlify.app/",
+    link: "https://musicty.netlify.app/"
   },
   {
     id: 2,
@@ -84,7 +84,7 @@ export const projects = [
     des: "Create your own restaurant with your curated cuisine list.",
     img: "/mern.jpeg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://mern-food-app-frontend-ijjc.onrender.com/",
+    link: "https://mern-food-app-frontend-ijjc.onrender.com/"
   },
   {
     id: 3,
@@ -92,7 +92,7 @@ export const projects = [
     des: "Explore our college site, and walk through our online library",
     img: "/student.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://myuni.netlify.app/",
+    link: "https://myuni.netlify.app/"
   },
   {
     id: 4,
@@ -100,7 +100,7 @@ export const projects = [
     des: "Amazing food recipe with youtube tutorials",
     img: "/foodie.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://amazingfoodie.netlify.app/",
+    link: "https://amazingfoodie.netlify.app/"
   },
   {
     id: 5,
@@ -108,16 +108,16 @@ export const projects = [
     des: "This is a speelink clone website built with react native ",
     img: "/speedlink.jpeg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://speedlinkng.vercel.app",
+    link: "https://speedlinkng.vercel.app"
   },
   {
     id: 6,
-    title: "APk for speedlink clone",
+    title: "APk For a simple product app",
     des: "This is the apk file for the speedlink clone",
     img: "/speedlinknative.jpeg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://expo.dev/accounts/theamazingjosh/projects/speedlink/buizlds/95e976cf-386b-4d5b-b1a2-9cd6aa4b5756",
-  },
+    link: "https://expo.dev/artifacts/eas/5pHfum4znuPotSLCL5srSP.apk"
+  }
 ];
 
 

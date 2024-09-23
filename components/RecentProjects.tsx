@@ -13,14 +13,14 @@ const RecentProjects = () => {
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
       </h1>
-      <div className="grid  lg:grid-cols-3 p-4 gap-16 mt-8">
+      <div className="grid  lg:grid-cols-2 p-4 gap-16 mt-8">
         {projects.map((item) => (
           <div
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center lg:w-96  w-full"
+            className="lg:min-h-[32.5rem] h-[25rem] md:m-10 lg:m-12 flex items-center justify-center lg:w-96  w-full"
             key={item.id}
           >
-            <PinContainer title="" href="">
-              <div className="relative flex items-center justify-center w-[80vw] lg:w-96 overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+            <PinContainer  title="" href="">
+              <div className=" relative flex items-center justify-center w-[80vw] lg:w-[420px] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
