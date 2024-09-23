@@ -105,7 +105,7 @@ export const projects = [
   {
     id: 5,
     title: "Speedlink Clone",
-    des: "This is a speelink clone website built with react native ",
+    des: "This is a speelink clone website  ",
     img: "/speedlink.jpeg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://speedlinkng.vercel.app"
@@ -113,7 +113,7 @@ export const projects = [
   {
     id: 6,
     title: "APk For a simple product app",
-    des: "This is the apk file for the speedlink clone",
+    des: "This is the apk file for a simple products application",
     img: "/speedlinknative.jpeg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://expo.dev/artifacts/eas/5pHfum4znuPotSLCL5srSP.apk"
