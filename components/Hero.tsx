@@ -53,30 +53,26 @@ const Hero = () => {
                   <div className="md:flex md:justify-between">
                     <div className="flex items-center justify-around md:w-[600px] m-auto  bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border-4 border-white text-white shadow-xl p-4  rounded-full">
                       {/* <FaLinkedin className='border border-black p-2 hover:scale-110 ease-in rounded-full m-1' size={40}/> */}
-                      <a href="https://github.com/AmazingJosh">
-                        <FaGithub
-                          className="border border-black bg-black p-2 hover:scale-110 ease-in rounded-full m-1"
-                          size={50}
-                        />
-                      </a>
-                      <a href="https://twitter.com/theamazingJosh_?t=Fd8bDkjcxRV8G1JQQQH3PQs=09">
-                        <RiTwitterXFill
-                          className="bg-black  p-2 hover:scale-105 ease-in m-1"
-                          size={50}
-                        />
-                      </a>
-                      <a href="https://wa.me/message/UPKYII5XJW5GH1">
-                        <FaWhatsapp
-                          className=" text-white bg-green-600 border-2 border-white  p-2 hover:scale-105 ease-in  rounded-full m-1"
-                          size={50}
-                        />
-                      </a>
-                      <a href="mailto:theamazingkeyz@gmail.com">
-                        <HiOutlineMail
-                          className="border border-white text-white hover:scale-105 ease-in p-2 rounded-full m-1"
-                          size={50}
-                        />
-                      </a>
+                      <a href="https://wa.me/message/UPKYII5XJW5GH1">  <FaGithub
+                  className="border border-black bg-black p-2 hover:scale-110 ease-in rounded-full m-1"
+                   size={50}
+                /> </a>
+               
+             
+                      <a href="https://twitter.com/theamazingJosh_?t=Fd8bDkjcxRV8G1JQQQH3PQs=09">  <RiTwitterXFill
+                  className="border border-black bg-black p-2 hover:scale-110 ease-in rounded-full m-1"
+                   size={50}
+                /> </a>
+                      
+                         <a href="https://wa.me/message/UPKYII5XJW5GH1">  <FaWhatsapp
+                  className="border border-black bg-green-600 p-2 hover:scale-110 ease-in rounded-full m-1"
+                   size={50}
+                /> </a>
+                      
+                        <Link href="mailto:theamazingkeyz@gmail.com">  <HiOutlineMail
+                  className="border border-black bg-pink-500 p-2 hover:scale-110 ease-in rounded-full m-1"
+                   size={50}
+                /> </Link>
                     </div>
                     <Image
                       id="svg"
