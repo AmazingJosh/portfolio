@@ -216,7 +216,7 @@ export const FloatingNav = ({
 
                   <a href="/#contact">
                     <li className=" border  hover:bg-white border-purple-600  sm:text-3xl sm:p-6 hover:ease-in-out hover:duration-500 text-center font-bold text-[#56] text-lg ml-[-20px] py-[10px] px-[20px] mt-5  hover:border-b">
-                      Let's Connect
+                      Connect with me
                     </li>
                   </a>
                 </ul>
