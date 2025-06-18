@@ -44,7 +44,7 @@ const Skills = () => {
       className="w-full py-20 px-4 relative bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e]"
     >
       <div className="max-w-[1240px] mx-auto">
-        <h2 className="text-center text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-700 mb-16">
+        <h2 className="text-center text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 mb-16">
           My Favourite Frameworks
         </h2>
 
