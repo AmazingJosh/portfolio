@@ -11,7 +11,11 @@ declare module "@react-three/fiber" {
   }
 }
 
-extend({ ThreeGlobe });
+useEffect(() => {
+  if (typeof window !== "undefined") {
+    extend({ ThreeGlobe });
+  }
+}, []);
 
 const RING_PROPAGATION_SPEED = 3;
 const aspect = 1.2;
@@ -234,10 +238,12 @@ export function WebGLRendererConfig() {
   const { gl, size } = useThree();
 
   useEffect(() => {
-    gl.setPixelRatio(window.devicePixelRatio);
-    gl.setSize(size.width, size.height);
-    gl.setClearColor(0xffaaff, 0);
-  }, []);
+    if (typeof window !== "undefined") {
+      gl.setPixelRatio(window.devicePixelRatio);
+      gl.setSize(size.width, size.height);
+      gl.setClearColor(0xffaaff, 0);
+    }
+  }, [gl, size]);
 
   return null;
 }
