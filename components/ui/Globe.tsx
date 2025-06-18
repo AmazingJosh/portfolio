@@ -72,11 +72,10 @@ export function Globe({ globeConfig, data }: WorldProps) {
     | null
   >(null);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      extend({ ThreeGlobe });
-    }
-  }, []);
+  if (typeof window !== "undefined") {
+    extend({ ThreeGlobe });
+  }
+  
 
   const globeRef = useRef<ThreeGlobe | null>(null);
 
