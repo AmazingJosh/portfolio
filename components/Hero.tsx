@@ -43,7 +43,7 @@ const Hero = () => {
                 className="hover:-translate-y-4 mx-auto duration-1000 transition delay-100 ease-in-out w-full "
               >
                 <p className="animate-pulse mt-32 md:mt-40 md:p-4 border-white border-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg uppercase tracking-widest text-white sm:py-2 text-sm">
-                  Welcome to my Portfolio, Let's build something together
+                  Welcome to my Portfolio, Let us build something together
                 </p>
                 <TextGenerateEffect
                   className="sm:p-4 pb-4 text-sm text-center sm:text-2xl font-bold"

@@ -11,11 +11,7 @@ declare module "@react-three/fiber" {
   }
 }
 
-useEffect(() => {
-  if (typeof window !== "undefined") {
-    extend({ ThreeGlobe });
-  }
-}, []);
+
 
 const RING_PROPAGATION_SPEED = 3;
 const aspect = 1.2;
@@ -75,6 +71,12 @@ export function Globe({ globeConfig, data }: WorldProps) {
       }[]
     | null
   >(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      extend({ ThreeGlobe });
+    }
+  }, []);
 
   const globeRef = useRef<ThreeGlobe | null>(null);
 

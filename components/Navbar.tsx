@@ -74,7 +74,7 @@ const NavBar = () => {
         <a href="https://linkedin.com/in/amjcodes"><FaLinkedin className='border border-black p-2 sm:w-16 sm:h-16  rounded-full m-1 shadow-lg shadow-black/30' size={40}/></a>
         </div>
 
-        <a href="/#contact"><li className=" border  hover:bg-white border-purple-600  sm:text-3xl sm:p-6 hover:ease-in-out hover:duration-500 text-center font-bold text-[#56] text-lg ml-[-20px] py-[10px] px-[20px] mt-5  hover:border-b">Let's Connect</li></a>
+        <a href="/#contact"><li className=" border  hover:bg-white border-purple-600  sm:text-3xl sm:p-6 hover:ease-in-out hover:duration-500 text-center font-bold text-[#56] text-lg ml-[-20px] py-[10px] px-[20px] mt-5  hover:border-b">Connect with me</li></a>
 
 
       </ul>
