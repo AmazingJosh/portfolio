@@ -61,7 +61,7 @@ const NavBar = () => {
     <div className=''>
       <ul className='py-4 flex flex-col'>
 
-          <a href="/home"><li className='py-4 text-sm sm:text-2xl'>Home</li></a>
+          <a href="/#home"><li className='py-4 text-sm sm:text-2xl'>Home</li></a>
 
           <a href="/#skills"><li className='py-4 text-sm sm:text-2xl'>Skills</li></a>
 
