@@ -36,7 +36,7 @@ const NavBar = () => {
 <a href="https://github.com/AmazingJosh"><FaGithub   className='border border-pink-600 p-2 rounded-full m-1' size={40}/></a>
 <a href="https://linkedin.com/in/amjcodes"><FaLinkedin className='border border-pink-600 p-2 rounded-full m-1' size={40}/></a>
 </div>
- <a href="/#contact"><li className=" border hover:bg-white border-pink-500 hover:ease-in-out hover:duration-500 text-center font-bold text-lg   py-[10px] px-[10px] ml-10  hover:border-b">Lets Connect</li></a>
+ <a className='m-20' href="/#contact"><li className=" border hover:bg-white border-pink-500 hover:ease-in-out hover:duration-500 text-center font-bold text-lg   py-[10px] px-[10px] ml-8  hover:border-b">Lets Connect</li></a>
  </ul>
 
  <div onClick={toggle} className='lg:hidden'>
