@@ -1,122 +1,92 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+// Import your images
+import html from "../public/html.png";
+import css from "../public/css.png";
+import javascript from "../public/javascript.png";
+import react from "../public/react.png";
+import reactNative from "../public/react-native.jpg";
+import scss from "../public/scss1.png";
+import tailwind from "../public/tailwind.png";
+import nextjs from "../public/nextjs.png";
+import express from "../public/Express.jpg";
+import mysql from "../public/mysql.png";
+import mongodb from "../public/mongodb.png";
+import typescript from "../public/typescript.png";
+
+const skills = [
+  { name: "HTML", icon: html },
+  { name: "CSS", icon: css },
+  { name: "JavaScript", icon: javascript },
+  { name: "React JS", icon: react },
+  { name: "React Native", icon: reactNative },
+  { name: "SCSS", icon: scss },
+  { name: "Tailwind", icon: tailwind },
+  { name: "Next JS", icon: nextjs },
+  { name: "Express JS", icon: express },
+  { name: "MySQL", icon: mysql },
+  { name: "MongoDB", icon: mongodb },
+  { name: "TypeScript", icon: typescript }
+];
 
 const Skills = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1
+  });
+
   return (
-    <div id="skills" className="w-full p-2 hide">
-      <div className="max-w-[1240px] mx-auto justify-center h-full">
-        {/* <p className="tracking-widest uppercase text-xl text-violet-700 flex items-center justify-center">
-          Skills
-        </p> */}
-        <h2 className="flex justify-center font-bold text-2xl sm:text-4xl text-pink-600">
-          These are some of my favorite frameworks
+    <section
+      id="skills"
+      className="w-full py-20 px-4 relative bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e]"
+    >
+      <div className="max-w-[1240px] mx-auto">
+        <h2 className="text-center text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-700 mb-16">
+          My Favourite Frameworks
         </h2>
-        <div className="">
-          <div className="text-violet-600 p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
-            <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center">
-              <div className="m-auto shadow-xl p-8 rounded-xl hover:scale-105 ease-in duration-300">
-                <Image
-                  src={require("../public/html.png")}
-                  className="w-16 h-16"
-                  alt=""
-                />
-                <p className="flex items-center justify-center">HTML</p>
-              </div>
-              <div className="shadow-xl p-8  rounded-xl hover:scale-105 ease-in duration-300 m-auto">
-                <Image
-                  src={require("../public/css.png")}
-                  className="w-16 h-16"
-                  alt=""
-                />
-                <p className="flex items-center justify-center">CSS</p>
-              </div>
-              <div className="shadow-xl p-8  rounded-xl hover:scale-105 ease-in duration-300 m-auto">
-                <Image
-                  src={require("../public/javascript.png")}
-                  className="w-16 h-16"
-                  alt=""
-                />
-                <p className="items">JavaScript</p>
-              </div>
-              <div className="shadow-xl p-8 rounded-xl hover:scale-105 ease-in duration-300 m-auto">
-                <Image
-                  src={require("../public/react.png")}
-                  className="w-16 h-16"
-                  alt=""
-                />
-                <p className="items">React Js</p>
-              </div>
-              <div className="shadow-xl p-8 rounded-xl hover:scale-105 ease-in duration-300 m-auto">
-                <Image
-                  src={require("../public/react-native.jpg")}
-                  className="w-16 h-16"
-                  alt=""
-                />
-                <p className="items">React native</p>
-              </div>
-              <div className="shadow-xl p-8  rounded-xl hover:scale-105 ease-in duration-300 m-auto">
-                <Image
-                  src={require("../public/scss1.png")}
-                  className="w-16 h-16"
-                  alt=""
-                />
-                <p className="items">SCSS</p>
-              </div>
-              <div className="shadow-xl p-8 rounded-xl hover:scale-105 ease-in duration-300 m-auto">
-                <Image
-                  src={require("../public/tailwind.png")}
-                  className="w-16 h-16"
-                  alt=""
-                />
-                <p className="items">Tailwind</p>
-              </div>
 
-              <div className="shadow-xl p-8 rounded-xl hover:scale-105 ease-in duration-300 m-auto">
-                <Image
-                  src={require("../public/nextjs.png")}
-                  className="w-16 h-16"
-                  alt=""
-                />
-                <p className="items">Next Js</p>
-              </div>
-              <div className="shadow-xl p-8 rounded-xl hover:scale-105 ease-in duration-300 m-auto">
-                <Image
-                  src={require("../public/Express.jpg")}
-                  className="w-16 h-16"
-                  alt=""
-                />
-                <p className="items">Express Js</p>
-              </div>
-              <div className="shadow-xl p-8 rounded-xl hover:scale-105 ease-in duration-300 m-auto">
-                <Image
-                  src={require("../public/mysql.png")}
-                  className="w-16 h-16"
-                  alt=""
-                />
-                <p className="items">MySql</p>
-              </div>
-              <div className="shadow-xl p-8 rounded-xl hover:scale-105 ease-in duration-300 m-auto">
-                <Image
-                  src={require("../public/mongodb.png")}
-                  className="w-16 h-16"
-                  alt=""
-                />
-                <p className="items">Mongodb</p>
-              </div>
-              <div className="shadow-xl p-8 rounded-xl hover:scale-105 ease-in duration-300 m-auto">
-                <Image
-                  src={require("../public/typescript.png")}
-                  className="w-16 h-16"
-                  alt=""
-                />
-                <p className="items">Typescript</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.1
+              }
+            },
+            hidden: {}
+          }}
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6"
+        >
+          {skills.map((skill, index) => (
+            <motion.div
+              key={index}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 }
+              }}
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 260, damping: 20 }}
+              className="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl shadow-xl text-center hover:shadow-pink-500/40"
+            >
+              <Image
+                src={skill.icon}
+                alt={skill.name}
+                width={64}
+                height={64}
+                className="mx-auto mb-4 object-contain"
+              />
+              <h3 className="text-white font-semibold">{skill.name}</h3>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
-}
+};
 
-export default Skills
+export default Skills;

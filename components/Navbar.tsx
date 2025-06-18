@@ -30,11 +30,11 @@ const NavBar = () => {
 
     <a href="/#home"><li className="uppercase text-sm ml-10 md:text-lg hover:border-b">Home</li></a>
     <a href="/#skills"> <li className="uppercase text-sm ml-10 md:text-lg   hover:border-b">SKILLS</li></a>
-      <a href="/#project"><li className="uppercase text-sm ml-10 md:text-lg  hover:border-b">projects</li></a>
+      <a href="/#recentproject"><li className="uppercase text-sm ml-10 md:text-lg  hover:border-b">projects</li></a>
      <div className='flex m-4 '>
 <a href="https://wa.me/message/UPKYII5XJW5GH1"><FaWhatsapp className='border border-pink-600 p-2 rounded-full m-1' size={40}/></a>
 <a href="https://github.com/AmazingJosh"><FaGithub   className='border border-pink-600 p-2 rounded-full m-1' size={40}/></a>
-<a href="https://twitter.com/theamazingJosh_?t=Fd8bDkjcxRV8G1JQQQH3PQs=09"><RiTwitterXFill className='border border-pink-600 p-2 rounded-full m-1' size={40}/></a>
+<a href="https://linkedin.com/in/amjcodes"><FaLinkedin className='border border-pink-600 p-2 rounded-full m-1' size={40}/></a>
 </div>
  <a href="/#contact"><li className=" border hover:bg-white border-pink-500 hover:ease-in-out hover:duration-500 text-center font-bold text-lg   py-[10px] px-[10px] ml-10  hover:border-b">Lets Connect</li></a>
  </ul>
@@ -66,12 +66,12 @@ const NavBar = () => {
           <a href="/#skills"><li className='py-4 text-sm sm:text-2xl'>Skills</li></a>
 
     
-         <a href="/#project"> <li className='py-4 text-sm sm:text-2xl'>Project</li></a>
+         <a href="/#recentproject"> <li className='py-4 text-sm sm:text-2xl'>Project</li></a>
         <div className='flex ml-[-4px]'>
           
         <a href="https://wa.me/message/UPKYII5XJW5GH1"><FaWhatsapp className='border border-black p-2 sm:w-16 sm:h-16 rounded-full m-1 shadow-lg shadow-black/30' size={40}/></a>
         <a href="https://github.com/AmazingJosh"><FaGithub className='border border-black p-2 sm:w-16 sm:h-16  rounded-full m-1 shadow-lg shadow-black/30' size={40}/></a>
-        <a href="https://twitter.com/theamazingJosh_?t=Fd8bDkjcxRV8G1JQQQH3PQs=09"><RiTwitterXFill className='border border-black p-2 sm:w-16 sm:h-16  rounded-full m-1 shadow-lg shadow-black/30' size={40}/></a>
+        <a href="https://linkedin.com/in/amjcodes"><FaLinkedin className='border border-black p-2 sm:w-16 sm:h-16  rounded-full m-1 shadow-lg shadow-black/30' size={40}/></a>
         </div>
 
         <a href="/#contact"><li className=" border  hover:bg-white border-purple-600  sm:text-3xl sm:p-6 hover:ease-in-out hover:duration-500 text-center font-bold text-[#56] text-lg ml-[-20px] py-[10px] px-[20px] mt-5  hover:border-b">Let's Connect</li></a>

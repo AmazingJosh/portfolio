@@ -8,23 +8,24 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client specifications, fostering open collaboration ",
+    title:
+      "I focus on meeting client requirements while encouraging transparent and collaborative communication.",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
     img: "/b1.svg",
-    spareImg: "",
+    spareImg: ""
   },
   {
     id: 2,
-    title: "I'm very flexible with time all zone communications",
+    title: "I'm highly adaptable to work across all time zones.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
     img: "",
-    spareImg: "",
+    spareImg: ""
   },
   {
     id: 3,
@@ -34,7 +35,7 @@ export const gridItems = [
     imgClassName: "",
     titleClassName: "justify-center",
     img: "",
-    spareImg: "",
+    spareImg: ""
   },
   {
     id: 4,
@@ -44,79 +45,79 @@ export const gridItems = [
     imgClassName: "",
     titleClassName: "justify-start",
     img: "/grid.svg",
-    spareImg: "/b4.svg",
+    spareImg: "/b4.svg"
   },
 
   {
     id: 5,
-    title: "Currently building a real time chat app",
-    description: "The Inside Scoop",
+    title: "Currently building the biggest E-commerce",
+    description: "Exclusive Insights",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/b5.svg",
-    spareImg: "/grid.svg",
+    spareImg: "/grid.svg"
   },
   {
     id: 6,
-    title: "Do you want to start a project together?",
+    title: "How about we kick off a project together?",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
     img: "",
-    spareImg: "",
-  },
+    spareImg: ""
+  }
 ];
 
 export const projects = [
   {
     id: 1,
-    title: "Music Download App",
-    des: "Checkout your favourite song on our music dowload blog",
-    img: "/music.png",
+    title: "UfarmX",
+    des: "Checkout this farmer's website",
+    img: "/ufarmx.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://musicty.netlify.app/"
+    link: "https://ufarmx-buyer.vercel.app/"
   },
   {
     id: 2,
-    title: "Food order App",
-    des: "Create your own restaurant with your curated cuisine list.",
-    img: "/mern.jpeg",
+    title: "Ulego(Appstore)",
+    des: "Fintech application.",
+    img: "/ulego.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://mern-food-app-frontend-ijjc.onrender.com/"
+    link: "https://apps.apple.com/us/app/ulego/id1635356430/"
   },
   {
     id: 3,
-    title: "College Site",
-    des: "Explore our college site, and walk through our online library",
-    img: "/student.png",
+    title: "Ulego(Playstore)",
+    des: "Fintech application",
+    img: "/ulego.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://myuni.netlify.app/"
+    link: "https://play.google.com/store/apps/datasafety?id=com.ulegoapp_app"
   },
   {
     id: 4,
-    title: "Food Recipe application",
-    des: "Amazing food recipe with youtube tutorials",
-    img: "/foodie.png",
+    title: "Elonatech",
+    des: "Visit for your shopping!",
+    img: "/Elonatech.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://amazingfoodie.netlify.app/"
+    link: "https://elonatech.com.ng/"
   },
   {
     id: 5,
-    title: "Speedlink Clone",
-    des: "This is a speelink clone website  ",
-    img: "/speedlink.jpeg",
+    title: "UfarmX(Mobile app)",
+    des: "The mobile application of our ufarmx  ",
+    img: "/ufarm.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://speedlinkng.vercel.app"
+    link: "https://play.google.com/store/apps/datasafety?id=com.ufarmx.ufarmxmobile"
   },
   {
     id: 6,
-    title: "APk For a simple product app",
-    des: "This is the apk file for a simple products application",
-    img: "/speedlinknative.jpeg",
+    title: "Task Tracker",
+    des: "Create and track your task progress!",
+    img: "/task-tracker.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://expo.dev/artifacts/eas/5pHfum4znuPotSLCL5srSP.apk"
+    link: "https://tracker-nine-pi.vercel.app/"
   }
 ];
 
