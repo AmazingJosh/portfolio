@@ -1,9 +1,10 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-// Import your images
+// Import images
 import html from "../public/html.png";
 import css from "../public/css.png";
 import javascript from "../public/javascript.png";
@@ -33,9 +34,9 @@ const skills = [
 ];
 
 const Skills = () => {
-  const [ref, inView] = useInView({
+  const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.15
   });
 
   return (
@@ -44,43 +45,39 @@ const Skills = () => {
       className="w-full py-20 px-4 relative bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e]"
     >
       <div className="max-w-[1240px] mx-auto">
-        <h2 className="text-center text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 mb-16">
+        <h2 className="text-center text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 p-4 mb-10">
           My Favourite Frameworks
         </h2>
 
         <motion.div
           ref={ref}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={{
-            visible: {
-              transition: {
-                staggerChildren: 0.1
-              }
-            },
-            hidden: {}
-          }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={inView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6"
         >
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 }
-              }}
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 260, damping: 20 }}
-              className="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl shadow-xl text-center hover:shadow-pink-500/40"
+              whileHover={{ scale: 1.08, y: -4 }}
+              transition={{ type: "spring", stiffness: 180, damping: 14 }}
+              className="bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-lg hover:shadow-pink-500/30"
             >
-              <Image
-                src={skill.icon}
-                alt={skill.name}
-                width={64}
-                height={64}
-                className="mx-auto mb-4 object-contain"
-              />
-              <h3 className="text-white font-semibold">{skill.name}</h3>
+              <div className="flex flex-col items-center justify-center">
+                <div className="w-16 h-16 relative mb-4">
+                  <Image
+                    src={skill.icon}
+                    alt={skill.name}
+                    fill
+                    sizes="64px"
+                    className="object-contain rounded-md"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-white font-semibold text-lg">
+                  {skill.name}
+                </h3>
+              </div>
             </motion.div>
           ))}
         </motion.div>
