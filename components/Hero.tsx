@@ -49,7 +49,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="https://twitter.com/theamazingJosh_"
+              href="https://twitter.com/amazhiel_"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"

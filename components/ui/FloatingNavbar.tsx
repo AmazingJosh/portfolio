@@ -71,14 +71,14 @@ export const FloatingNav = ({
       <motion.div
         initial={{
           opacity: 1,
-          y: -100,
+          y: -100
         }}
         animate={{
           y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
+          opacity: visible ? 1 : 0
         }}
         transition={{
-          duration: 2,
+          duration: 2
         }}
       >
         <div
@@ -96,6 +96,7 @@ export const FloatingNav = ({
                   src={Logo}
                   className="object-cover w-[85px] h-[85px] p-1 rounded-full"
                   alt={""}
+                  loading="lazy"
                 />
               </a>
             </div>
