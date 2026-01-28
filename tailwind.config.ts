@@ -26,6 +26,9 @@ const config = {
       }
     },
     extend: {
+      fontFamily: {
+        sans: ["Outfit", "sans-serif"] // Change 'Outfit' to 'Inter' or 'Space Grotesk' if you chose those
+      },
       colors: {
         black: {
           DEFAULT: "#000",
