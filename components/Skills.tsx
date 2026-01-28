@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -18,7 +18,14 @@ import mysql from "../public/mysql.png";
 import mongodb from "../public/mongodb.png";
 import typescript from "../public/typescript.png";
 
-const skills = [
+interface Skill {
+  name: string;
+  icon: StaticImageData;
+  category: string;
+  color: string;
+}
+
+const skills: Skill[] = [
   {
     name: "HTML",
     icon: html,
@@ -184,63 +191,12 @@ const Skills = () => {
           className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
         >
           {skills.map((skill, index) => (
-            <motion.div
+            <SkillCard
               key={index}
-              variants={itemVariants}
-              whileHover={{ y: -8, scale: 1.03 }}
-              className="group relative"
-            >
-              {/* Gradient Border Effect */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${skill.color} rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500`}
-              />
-
-              {/* Card */}
-              <div className="relative bg-slate-900/50 backdrop-blur-xl border border-slate-800 group-hover:border-slate-700 rounded-2xl p-6 sm:p-8 transition-all duration-300 overflow-hidden">
-                {/* Subtle shine effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                {/* Content */}
-                <div className="relative flex flex-col items-center justify-center space-y-4">
-                  {/* Icon Container */}
-                  <div className="relative">
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-br ${skill.color} rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-opacity duration-500`}
-                    />
-                    <div className="relative w-16 h-16 sm:w-20 sm:h-20 bg-slate-800/50 rounded-xl p-3 group-hover:scale-110 transition-transform duration-300">
-                      <Image
-                        src={skill.icon}
-                        alt={skill.name}
-                        fill
-                        sizes="80px"
-                        className="object-contain p-1"
-                        loading="lazy"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Skill Name */}
-                  <div className="text-center">
-                    <h3 className="text-white font-bold text-base sm:text-lg mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-400 group-hover:to-violet-400 transition-all duration-300">
-                      {skill.name}
-                    </h3>
-                    <span className="text-gray-500 text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {skill.category}
-                    </span>
-                  </div>
-
-                  {/* Progress Bar Animation */}
-                  <div className="w-full h-1 bg-slate-800 rounded-full overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <motion.div
-                      className={`h-full bg-gradient-to-r ${skill.color} rounded-full`}
-                      initial={{ width: 0 }}
-                      whileInView={{ width: "100%" }}
-                      transition={{ duration: 1, delay: 0.2 }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+              skill={skill}
+              index={index}
+              inView={inView}
+            />
           ))}
         </motion.div>
 
@@ -274,6 +230,150 @@ const Skills = () => {
         </motion.div>
       </div>
     </section>
+  );
+};
+
+// Separate component for each skill card with individual viewport detection
+interface SkillCardProps {
+  skill: Skill;
+  index: number;
+  inView: boolean;
+}
+
+const SkillCard: React.FC<SkillCardProps> = ({ skill, index, inView: parentInView }) => {
+  const { ref: cardRef, inView: cardInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3 // Trigger when 30% of card is visible
+  });
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+      scale: 0.9
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 12
+      }
+    }
+  };
+
+  return (
+    <motion.div
+      ref={cardRef}
+      variants={itemVariants}
+      initial="hidden"
+      animate={parentInView ? "visible" : "hidden"}
+      whileHover={{ y: -8, scale: 1.03 }}
+      className="group relative"
+    >
+      {/* Gradient Border Effect - Auto-animates on scroll into view */}
+      <motion.div
+        className={`absolute inset-0 bg-gradient-to-br ${skill.color} rounded-2xl blur-xl`}
+        initial={{ opacity: 0 }}
+        animate={cardInView ? { opacity: 0.6 } : { opacity: 0 }}
+        transition={{ duration: 0.8, delay: index * 0.05 }}
+      />
+
+      {/* Card */}
+      <div className="relative bg-slate-900/50 backdrop-blur-xl border border-slate-800 group-hover:border-slate-700 rounded-2xl p-6 sm:p-8 transition-all duration-300 overflow-hidden">
+        {/* Subtle shine effect - Auto-animates */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"
+          initial={{ opacity: 0 }}
+          animate={cardInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.05 + 0.2 }}
+        />
+
+        {/* Content */}
+        <div className="relative flex flex-col items-center justify-center space-y-4">
+          {/* Icon Container with pulse animation */}
+          <motion.div
+            className="relative"
+            animate={cardInView ? { scale: [1, 1.05, 1] } : {}}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatDelay: 3,
+              delay: index * 0.1
+            }}
+          >
+            {/* Icon glow - auto-plays */}
+            <motion.div
+              className={`absolute inset-0 bg-gradient-to-br ${skill.color} rounded-xl blur-md`}
+              initial={{ opacity: 0 }}
+              animate={cardInView ? { opacity: 0.4 } : { opacity: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.05 + 0.3 }}
+            />
+            <motion.div
+              className="relative w-16 h-16 sm:w-20 sm:h-20 bg-slate-800/50 rounded-xl p-3 transition-transform duration-300"
+              initial={{ scale: 0.8, rotate: -10 }}
+              animate={cardInView ? { scale: 1, rotate: 0 } : {}}
+              transition={{
+                type: "spring",
+                stiffness: 200,
+                damping: 15,
+                delay: index * 0.05 + 0.1
+              }}
+            >
+              <Image
+                src={skill.icon}
+                alt={skill.name}
+                fill
+                sizes="80px"
+                className="object-contain p-1"
+                loading="lazy"
+              />
+            </motion.div>
+          </motion.div>
+
+          {/* Skill Name with gradient text animation */}
+          <div className="text-center">
+            <motion.h3
+              className="text-white font-bold text-base sm:text-lg mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-400 group-hover:to-violet-400 transition-all duration-300"
+              initial={{ opacity: 0, y: 10 }}
+              animate={cardInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.05 + 0.4 }}
+            >
+              {skill.name}
+            </motion.h3>
+            <motion.span
+              className="text-gray-500 text-xs sm:text-sm font-medium"
+              initial={{ opacity: 0 }}
+              animate={cardInView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.05 + 0.5 }}
+            >
+              {skill.category}
+            </motion.span>
+          </div>
+
+          {/* Progress Bar Animation - Auto-plays on scroll */}
+          <motion.div
+            className="w-full h-1 bg-slate-800 rounded-full overflow-hidden"
+            initial={{ opacity: 0, scaleX: 0 }}
+            animate={cardInView ? { opacity: 1, scaleX: 1 } : {}}
+            transition={{ duration: 0.5, delay: index * 0.05 + 0.6 }}
+          >
+            <motion.div
+              className={`h-full bg-gradient-to-r ${skill.color} rounded-full`}
+              initial={{ width: 0 }}
+              animate={cardInView ? { width: "100%" } : { width: 0 }}
+              transition={{
+                duration: 1.2,
+                delay: index * 0.05 + 0.8,
+                ease: "easeOut"
+              }}
+            />
+          </motion.div>
+        </div>
+      </div>
+    </motion.div>
   );
 };
 

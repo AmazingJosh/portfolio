@@ -16,7 +16,7 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleShadow = () => {
-      window.scrollY >= 90 ? setShadow(true) : setShadow(false);
+      window.scrollY >= 1 ? setShadow(true) : setShadow(false);
     };
     window.addEventListener("scroll", handleShadow);
 
@@ -44,7 +44,7 @@ const NavBar = () => {
 
   return (
     <div
-      className={`fixed w-full h-20 z-50 transition-all duration-200 ${
+      className={`fixed w-full h-20 z-50 transition-all duration-300 ${
         shadow
           ? "bg-slate-900/80 backdrop-blur-xl shadow-2xl shadow-purple-500/10 border-b border-slate-800"
           : "bg-transparent"
@@ -66,19 +66,19 @@ const NavBar = () => {
           {/* Desktop Menu */}
           <ul className="hidden lg:flex md:items-center">
             <ScrollLink to="home" smooth duration={500}>
-              <li className="uppercase text-sm ml-10 md:text-lg text-violet-800 hover:text-white cursor-pointer transition-all duration-300 relative group">
+              <li className="uppercase text-sm ml-10 md:text-lg text-violet-700 hover:text-white cursor-pointer transition-all duration-300 relative group">
                 Home
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-violet-500 group-hover:w-full transition-all duration-300" />
               </li>
             </ScrollLink>
             <ScrollLink to="skills" smooth duration={500}>
-              <li className="uppercase text-sm ml-10 md:text-lg text-violet-800 hover:text-white cursor-pointer transition-all duration-300 relative group">
+              <li className="uppercase text-sm ml-10 md:text-lg text-violet-700 hover:text-white cursor-pointer transition-all duration-300 relative group">
                 Skills
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-violet-500 group-hover:w-full transition-all duration-300" />
               </li>
             </ScrollLink>
             <ScrollLink to="recentproject" smooth duration={500}>
-              <li className="uppercase text-sm ml-10 md:text-lg text-violet-800 hover:text-white cursor-pointer transition-all duration-300 relative group">
+              <li className="uppercase text-sm ml-10 md:text-lg text-violet-700 hover:text-white cursor-pointer transition-all duration-300 relative group">
                 Projects
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-violet-500 group-hover:w-full transition-all duration-300" />
               </li>
