@@ -81,19 +81,19 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Ulego(Appstore)",
+    title: "Fuse-Go(Appstore)",
     des: "Fintech application.",
     img: "/ulego.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://apps.apple.com/us/app/ulego/id1635356430/"
+    link: "https://apps.apple.com/us/app/fuse-go/id1662005454"
   },
   {
     id: 3,
-    title: "Ulego(Playstore)",
+    title: "Fuse-Go(Playstore)",
     des: "Fintech application",
     img: "/ulego.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://play.google.com/store/apps/datasafety?id=com.ulegoapp_app"
+    link: "https://play.google.com/store/apps/details?id=com.techfusion.fuse"
   },
   {
     id: 4,
