@@ -73,6 +73,14 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
+    title: "VibesAi — Your Intelligent Telegram Companion",
+    des: "An AI-powered Telegram bot that chats like a brilliant honest friend and hosts a full interactive game show — built with Node.js, Gemini, and DeepSeek.",
+    img: "/bot.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://t.me/amj1bot"
+  },
+  {
+    id: 2,
     title: "UfarmX",
     des: "Checkout this farmer's website",
     img: "/ufarmx.png",
@@ -80,7 +88,7 @@ export const projects = [
     link: "https://ufarmx-buyer.vercel.app/"
   },
   {
-    id: 2,
+    id: 3,
     title: "Fuse-Go(Appstore)",
     des: "Fintech application.",
     img: "/ulego.png",
@@ -88,7 +96,7 @@ export const projects = [
     link: "https://apps.apple.com/us/app/fuse-go/id1662005454"
   },
   {
-    id: 3,
+    id: 4,
     title: "Fuse-Go(Playstore)",
     des: "Fintech application",
     img: "/ulego.png",
@@ -96,7 +104,7 @@ export const projects = [
     link: "https://play.google.com/store/apps/details?id=com.techfusion.fuse"
   },
   {
-    id: 4,
+    id: 5,
     title: "Elonatech",
     des: "Visit for your shopping!",
     img: "/Elonatech.png",
@@ -104,7 +112,7 @@ export const projects = [
     link: "https://elonatech.com.ng/"
   },
   {
-    id: 5,
+    id: 6,
     title: "UfarmX(Mobile app)",
     des: "The mobile application of our ufarmx  ",
     img: "/ufarm.png",
@@ -112,7 +120,7 @@ export const projects = [
     link: "https://play.google.com/store/apps/datasafety?id=com.ufarmx.ufarmxmobile"
   },
   {
-    id: 6,
+    id: 7,
     title: "Task Tracker",
     des: "Create and track your task progress!",
     img: "/task-tracker.png",
