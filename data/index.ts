@@ -73,8 +73,8 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "VibesAi — Your Intelligent Telegram Companion",
-    des: "An AI-powered Telegram bot that chats like a brilliant honest friend and hosts a full interactive game show — built with Node.js, Gemini, and DeepSeek.",
+    title: "VibesAi — Your AI Companion",
+    des: "An AI Telegram bot powered by Gemni and DeepSeek, has gaming section for fun...you'd love it!",
     img: "/bot.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     link: "https://t.me/amj1bot"
