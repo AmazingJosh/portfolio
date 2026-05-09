@@ -73,11 +73,19 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "VibesAi — Your AI Companion",
-    des: "An AI Telegram bot powered by Gemni and DeepSeek, has gaming section for fun...you'd love it!",
+    title: "2-in-1 AI — Your AI Companion",
+    des: "Your 2-in-1 personalized AI Telegram bot..choose the one you want,,can add to group chat for group studies, arguments, projects, and ideas...veery fun to use!",
     img: "/bot.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     link: "https://t.me/amj1bot"
+  },
+  {
+    id: 9,
+    title: "Taskbot — Your auto Task bot",
+    des: "Carry out tasks in split seconds no need for wasting time looking for solutions....taskbot got you covered!!!",
+    img: "/tasklify.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://t.me/taskguybot"
   },
   {
     id: 2,
