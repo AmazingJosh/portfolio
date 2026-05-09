@@ -8,7 +8,7 @@ import {
   FaWhatsapp
 } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
-import { HiOutlineMail, HiHeart } from "react-icons/hi";
+import { HiOutlineMail } from "react-icons/hi";
 import MagicButton from "./MagicButton";
 
 const Footer = () => {

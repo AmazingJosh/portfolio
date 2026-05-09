@@ -9,7 +9,7 @@ import {
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { FaGithub, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaGithub,  FaWhatsapp } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 
 import Logo from "@/assets/logo.png"
